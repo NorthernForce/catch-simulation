@@ -26,7 +26,7 @@ int main()
    float rx;
    float tel,tel_last;
    float dtel;
-   float camera_angle = 15*0.0175; // 5 degree up
+   float camera_angle = 0*0.0175; // 0 degree up
    // float const ns = 0.006; // 1/120 of 40 degree fov
    // float const ns = .0175; // 1 degree noise
    // float const ns = 5*.0175;  // 5 degree noise
