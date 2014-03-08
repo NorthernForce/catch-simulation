@@ -26,6 +26,7 @@ int main()
    float rx;
    float tel,tel_last;
    float dtel;
+   float camera_angle = 15*0.0175; // 5 degree up
    // float const ns = 0.006; // 1/120 of 40 degree fov
    // float const ns = .0175; // 1 degree noise
    // float const ns = 5*.0175;  // 5 degree noise
@@ -51,6 +52,8 @@ int main()
    dtel=0.0;
    tel_last=0.0;
 
+   float tca = tan(camera_angle);
+
    cout << "K=" << c.GetK()<< endl;
    cout << "dt=" << c.Getdt() << endl;
    cout << "RAND_MAX" << RAND_MAX << endl;
@@ -62,6 +65,9 @@ int main()
        rx=r.getx(t);
        ry=r.gety(t);
        tel=r.camera_tel(x,z);
+       // simulate camera pointing angle error
+       //  using tangent-of-sum trig identity
+       tel = (tel + tca)/(1.0-tca*tel);
 
        dtel=(tel-tel_last)/dt;
        tel_last=tel;
