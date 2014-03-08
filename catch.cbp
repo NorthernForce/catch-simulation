@@ -32,7 +32,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Ball.hpp" />
+		<Unit filename="include/Control.hpp" />
+		<Unit filename="include/Parameters.hpp" />
+		<Unit filename="include/Robot.hpp" />
+		<Unit filename="include/filter1.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Ball.cpp" />
+		<Unit filename="src/Control.cpp" />
+		<Unit filename="src/Parameters.cpp" />
+		<Unit filename="src/Robot.cpp" />
+		<Unit filename="src/filter1.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
